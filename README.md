@@ -103,7 +103,7 @@ http://127.0.0.1:8000
 ---
 
 ## 📁 Estrutura do projeto
-
+```
 backend/
 ├── app/
 │   ├── Http/
@@ -123,7 +123,7 @@ backend/
 ├── .env
 ├── artisan
 └── composer.json
-
+```
 ---
 
 ## ⭐ Funcionalidades
