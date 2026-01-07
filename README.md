@@ -17,24 +17,6 @@ http://127.0.0.1:8000
 
 ---
 
-## ⚙️ Executar em modo desenvolvimento (sem Docker)
-
-1. Acesse a pasta backend  
-2. Instale as dependências  
-3. Execute as migrations  
-4. Inicie o servidor  
-
-Comandos:
-```
-composer install  
-php artisan migrate  
-php artisan serve  
-```
-A API ficará disponível em:
-http://127.0.0.1:8000
-
----
-
 ## 🚀 Tecnologias utilizadas
 
 - PHP 8+
@@ -90,8 +72,3 @@ backend/
 - Em ambiente produtivo, o `.env` **não deve ser versionado**
 - Este backend é consumido por um frontend desenvolvido em Vue.js (repositório separado)
 
----
-
-## 🔗 Repositório
-
-https://github.com/EduardoSteigleder/catalogo-filmes-backend
