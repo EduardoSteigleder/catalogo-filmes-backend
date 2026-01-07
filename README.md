@@ -9,10 +9,9 @@ Backend da aplicação **Catálogo de Filmes**, desenvolvido em **Laravel**, res
 > Antes de iniciar, certifique-se de que o **Docker Desktop esteja rodando**.
 
 Na raiz do projeto backend, execute:
-
-docker run -v "$(pwd)":/app -w /app composer:2 composer install  
-docker-compose up -d
-
+```
+docker compose up -d --build
+```
 A API ficará disponível em:
 http://127.0.0.1:8000
 
@@ -26,11 +25,11 @@ http://127.0.0.1:8000
 4. Inicie o servidor  
 
 Comandos:
-
+```
 composer install  
 php artisan migrate  
 php artisan serve  
-
+```
 A API ficará disponível em:
 http://127.0.0.1:8000
 
