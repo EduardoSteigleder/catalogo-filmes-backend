@@ -10,8 +10,7 @@ Backend da aplicação **Catálogo de Filmes**, desenvolvido em **Laravel**, res
 
 Na raiz do projeto backend, execute:
 ```
-docker run -v "$(pwd)":/app -w /app composer:2 composer install  
-docker-compose up -d
+docker compose up -d --build
 ```
 A API ficará disponível em:
 http://127.0.0.1:8000
