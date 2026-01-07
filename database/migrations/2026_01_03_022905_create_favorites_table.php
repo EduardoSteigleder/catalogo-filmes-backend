@@ -8,6 +8,10 @@ return new class extends Migration
 {
     public function up(): void
     {
+        if (Schema::hasTable('favorites')) {
+            return;
+        }
+
         Schema::create('favorites', function (Blueprint $table) {
             $table->id();
             $table->integer('tmdb_id')->unique();
