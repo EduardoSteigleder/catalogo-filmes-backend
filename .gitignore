@@ -1,6 +1,6 @@
 *.log
 .DS_Store
-.env
+#.env Foi comentado para ajudar o avaliador, mas sei que não é uma boa pratica de segurança.
 .env.backup
 .env.production
 .phpactor.json

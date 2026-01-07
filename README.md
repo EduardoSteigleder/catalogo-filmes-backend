@@ -18,68 +18,12 @@ http://127.0.0.1:8000
 
 ---
 
-## ⚙️ Configuração do arquivo `.env` (OBRIGATÓRIO)
-
-Antes de executar o backend, é necessário configurar corretamente o arquivo `.env`.
-
-1. Copie o arquivo de exemplo:
-   
-cp .env.example .env
-
-2. Configure as variáveis essenciais no `.env`:
-
-### Aplicação
-
-APP_NAME=Laravel  
-APP_ENV=local  
-APP_KEY=gerado automaticamente  
-APP_DEBUG=true  
-APP_URL=http://localhost:8000  
-
-> Caso o APP_KEY não exista, gere com:
-php artisan key:generate
-
----
-
-### Banco de Dados (Docker)
-
-O backend utiliza **MySQL rodando em container Docker**.
-
-DB_CONNECTION=mysql  
-DB_HOST=mysql  
-DB_PORT=3306  
-DB_DATABASE=catalogo_filmes  
-DB_USERNAME=root  
-DB_PASSWORD=root  
-
-> O valor `DB_HOST=mysql` é obrigatório quando o banco roda via Docker Compose.
-
----
-
-### Sessão
-
-SESSION_DRIVER=database
-
-> As sessões são persistidas no banco de dados.
-
----
-
-### API do TMDB (OBRIGATÓRIO)
-
-TMDB_API_KEY=SUA_CHAVE_DA_API_DO_TMDB
-
-> Essa chave é **obrigatória** para que a aplicação consiga buscar filmes.  
-> Crie sua chave em: https://www.themoviedb.org/settings/api
-
----
-
 ## ⚙️ Executar em modo desenvolvimento (sem Docker)
 
 1. Acesse a pasta backend  
 2. Instale as dependências  
-3. Configure o `.env`  
-4. Execute as migrations  
-5. Inicie o servidor  
+3. Execute as migrations  
+4. Inicie o servidor  
 
 Comandos:
 
@@ -103,7 +47,7 @@ http://127.0.0.1:8000
 ---
 
 ## 📁 Estrutura do projeto
-
+```
 backend/
 ├── app/
 │   ├── Http/
@@ -123,7 +67,7 @@ backend/
 ├── .env
 ├── artisan
 └── composer.json
-
+```
 ---
 
 ## ⭐ Funcionalidades
@@ -138,9 +82,13 @@ backend/
 
 ## 📌 Observações importantes
 
-- O arquivo `.env` é essencial para o funcionamento do projeto
-- A variável `TMDB_API_KEY` é obrigatória
-- O backend depende de um banco MySQL rodando via Docker
+- O arquivo `.env` está **commitado propositalmente neste repositório**
+- Embora **não seja uma boa prática em ambientes reais**, essa decisão foi tomada para:
+  - Agilizar testes
+  - Facilitar a execução do projeto por avaliadores
+  - Evitar configurações manuais adicionais
+- As credenciais presentes no `.env` são **exclusivamente para fins de estudo e teste**
+- Em ambiente produtivo, o `.env` **não deve ser versionado**
 - Este backend é consumido por um frontend desenvolvido em Vue.js (repositório separado)
 
 ---
