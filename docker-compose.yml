@@ -1,5 +1,5 @@
 services:
-  app:
+  catalogo-filmes-backend:
     build: .
     container_name: catalogo-filmes-backend
     ports:

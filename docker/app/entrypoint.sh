@@ -1,9 +1,13 @@
 #!/bin/sh
 set -e
 
+# Carrega variáveis do .env
+if [ -f .env ]; then
+  export $(cat .env | grep -v '#' | xargs)
+fi
+
 echo "Aguardando MySQL ficar saudável..."
-# healthcheck já garante, mas mantém um fallback
-until php -r "new PDO('mysql:host=mysql;dbname=catalogo_filmes', 'root', 'root');" >/dev/null 2>&1; do
+until php -r "new PDO('mysql:host=${DB_HOST};dbname=${DB_DATABASE}', '${DB_USERNAME}', '${DB_PASSWORD}');" >/dev/null 2>&1; do
   sleep 2
 done
 
