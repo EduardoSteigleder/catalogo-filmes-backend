@@ -1,5 +1,20 @@
-# Backend - Catálogo de Filmes
+# Catálogo de Filmes Backend
 
+Backend do projeto **Catálogo de Filmes**, desenvolvido em Laravel, utilizando MySQL e Docker.
+
+---
+
+## 🚀 Executar o Backend (BEC)
+
+> Antes de qualquer coisa, garanta que o Docker Desktop esteja rodando.
+
+Na raiz do projeto, execute:
+
+```
+bash
+docker-compose down
+docker-compose up -d
+```
 API REST desenvolvida em Laravel, responsável pela integração com a API do TMDB e pelo gerenciamento dos filmes favoritados no banco de dados.
 
 ## Tecnologias utilizadas
